@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--
+  Host this page at:
+    https://sheikhkassimyusuf.github.io/ClassQPrivacyPolicy/delete-account.html
+
+  Play Console → Data safety → "Data deletion URL" wants an HTTPS URL where
+  users who can't or won't use the in-app "Delete my account" button can
+  still request deletion. This page covers that requirement.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Delete your ClassQ account</title>
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --surface: #FFFFFF;
+    --border: #E4E4E7;
+    --text: #18181B;
+    --muted: #52525B;
+    --accent: #4F46E5;
+    --danger: #DC2626;
+    --danger-bg: rgba(220, 38, 38, 0.08);
+    --danger-border: rgba(220, 38, 38, 0.3);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .container { max-width: 680px; margin: 32px auto; }
+  header {
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .subtitle { color: var(--muted); font-size: 14px; margin: 0; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .card.danger {
+    background: var(--danger-bg);
+    border-color: var(--danger-border);
+  }
+  h2 {
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+  }
+  ul { padding-left: 22px; margin: 0 0 8px; }
+  li { margin-bottom: 6px; }
+
+  a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+
+  .mailto {
+    display: inline-block;
+    background: var(--danger);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .mailto:hover { opacity: 0.92; text-decoration: none; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  code {
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--accent);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "SF Mono", "Menlo", "Consolas", monospace;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="brand">ClassQ</div>
+    <h1>Delete your account</h1>
+    <p class="subtitle">
+      How to permanently remove your ClassQ account and the data associated with it.
+    </p>
+  </header>
+
+  <!-- Preferred path: in-app -->
+  <div class="card">
+    <h2>The fastest way: delete from inside the app</h2>
+    <p>
+      Open ClassQ on your phone and go to
+      <strong>Settings → Danger zone → Delete my account</strong>.
+    </p>
+    <p>
+      Tapping that button deletes your account and all associated data
+      immediately. You'll be signed out as soon as the deletion completes.
+    </p>
+  </div>
+
+  <!-- Alternative path: email request -->
+  <div class="card">
+    <h2>Can't access the app? Email us instead</h2>
+    <p>
+      If you no longer have the app installed or can't sign in, send an
+      account-deletion request to the address below. Use the email that's
+      on the account so we can verify your request.
+    </p>
+
+    <p style="margin: 20px 0;">
+      <a class="mailto"
+         href="mailto:support@classq.app?subject=Delete%20my%20ClassQ%20account&body=Please%20delete%20the%20ClassQ%20account%20associated%20with%20this%20email%20address.%0A%0AIf%20the%20email%20on%20the%20account%20is%20different%20from%20the%20one%20you're%20sending%20this%20from%2C%20include%20it%20here%3A%20">
+        Email support@classq.app
+      </a>
+    </p>
+
+    <p style="margin-top: 16px; font-size: 14px; color: var(--muted);">
+      We'll confirm receipt within 48 hours and complete deletion within 30 days.
+    </p>
+  </div>
+
+  <!-- What gets deleted -->
+  <div class="card">
+    <h2>What gets deleted</h2>
+    <ul>
+      <li>Your profile (name, email, profile photo)</li>
+      <li>All courses you created</li>
+      <li>Your enrollments in other instructors' courses</li>
+      <li>Questions you asked</li>
+      <li>Responses you authored</li>
+      <li>Upvotes and saved questions</li>
+      <li>Push notification tokens for your devices</li>
+      <li>Any active subscription access</li>
+    </ul>
+    <p style="margin-top: 16px; font-size: 14px; color: var(--muted);">
+      Aggregated analytics that don't identify you (e.g. daily active user
+      counts) are retained. Rows where your content appeared as part of
+      another user's activity log may still reference a generic
+      "[deleted user]" placeholder for their consistency, but nothing that
+      identifies you.
+    </p>
+  </div>
+
+  <!-- Subscription note -->
+  <div class="card danger">
+    <h2>Before you delete: cancel any active subscription</h2>
+    <p>
+      Deleting your account does <strong>not</strong> cancel subscription
+      billing. If you have an active Standard or Pro subscription, cancel
+      it first:
+    </p>
+    <ul>
+      <li>
+        <strong>iOS</strong> —
+        <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">
+          apps.apple.com/account/subscriptions
+        </a>
+      </li>
+      <li>
+        <strong>Android</strong> —
+        <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">
+          play.google.com/store/account/subscriptions
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Retention -->
+  <div class="card">
+    <h2>How long does deletion take?</h2>
+    <p>
+      In-app deletion is immediate. Email requests are processed within
+      30 days, typically much sooner.
+    </p>
+    <p>
+      Backups are rotated on a 30-day schedule. Your data is removed from
+      active systems immediately and from backups within 30 days.
+    </p>
+  </div>
+
+  <footer>
+    <p>
+      Questions? <a href="mailto:support@classq.app">support@classq.app</a>
+      ·
+      <a href="./index.html">Privacy policy</a>
+    </p>
+    <p style="margin-top: 8px; opacity: 0.7;">
+      ClassQ is developed by Yusuf Sheikh-Kassim.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
